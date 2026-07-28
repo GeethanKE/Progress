@@ -1,0 +1,42 @@
+{
+  "": {
+    "dependencies": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/Progress.d",
+    "object": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/Progress.o",
+    "swift-dependencies": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/master.swiftdeps"
+  },
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/Formatters.swift": {
+    "object": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/Formatters.swift.o",
+    "swiftmodule": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/Formatters~partial.swiftmodule",
+    "swift-dependencies": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/Formatters.swiftdeps"
+  },
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/IconRenderer.swift": {
+    "object": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/IconRenderer.swift.o",
+    "swiftmodule": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/IconRenderer~partial.swiftmodule",
+    "swift-dependencies": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/IconRenderer.swiftdeps"
+  },
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/ProgressStore.swift": {
+    "object": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/ProgressStore.swift.o",
+    "swiftmodule": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/ProgressStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/ProgressStore.swiftdeps"
+  },
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsView.swift": {
+    "object": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsView.swiftdeps"
+  },
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsWindowController.swift": {
+    "object": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsWindowController.swift.o",
+    "swiftmodule": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsWindowController~partial.swiftmodule",
+    "swift-dependencies": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsWindowController.swiftdeps"
+  },
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/StatusItemController.swift": {
+    "object": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/StatusItemController.swift.o",
+    "swiftmodule": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/StatusItemController~partial.swiftmodule",
+    "swift-dependencies": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/StatusItemController.swiftdeps"
+  },
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/main.swift": {
+    "object": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/main.swift.o",
+    "swiftmodule": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/main.swiftdeps"
+  }
+}

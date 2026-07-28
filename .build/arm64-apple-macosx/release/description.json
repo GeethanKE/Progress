@@ -1,0 +1,346 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.Progress-arm64-apple-macosx18.0-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/sources",
+      "importPath" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/Formatters.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/IconRenderer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/ProgressStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsWindowController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/StatusItemController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "Progress",
+      "moduleOutputPath" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Modules/Progress.swiftmodule",
+      "objects" : [
+        "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/Formatters.swift.o",
+        "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/IconRenderer.swift.o",
+        "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/ProgressStore.swift.o",
+        "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsView.swift.o",
+        "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsWindowController.swift.o",
+        "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/StatusItemController.swift.o",
+        "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-O",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-module-cache-path",
+        "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "Progress_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "progress"
+      ],
+      "outputFileMapPath" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/Formatters.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/IconRenderer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/ProgressStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsWindowController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/StatusItemController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Modules/Progress.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/Formatters.swift",
+        "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/IconRenderer.swift",
+        "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/ProgressStore.swift",
+        "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsView.swift",
+        "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsWindowController.swift",
+        "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/StatusItemController.swift",
+        "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/main.swift"
+      ],
+      "tempsPath" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "Progress" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "Progress",
+      "-package-name",
+      "progress",
+      "-whole-module-optimization",
+      "-num-threads",
+      "10",
+      "-c",
+      "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/Formatters.swift",
+      "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/IconRenderer.swift",
+      "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/ProgressStore.swift",
+      "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsView.swift",
+      "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsWindowController.swift",
+      "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/StatusItemController.swift",
+      "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/main.swift",
+      "-I",
+      "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-O",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-module-cache-path",
+      "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "Progress_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "progress",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "Progress" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "enableAllTraits" : false
+  },
+  "writeCommands" : {
+    "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/Formatters.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/IconRenderer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/ProgressStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsWindowController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/StatusItemController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/sources"
+    },
+    "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/Formatters.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/IconRenderer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/ProgressStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/SettingsWindowController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/StatusItemController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/Progress.product/Objects.LinkFileList"
+    },
+    "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/geethan/Documents/GitHub/Progress/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

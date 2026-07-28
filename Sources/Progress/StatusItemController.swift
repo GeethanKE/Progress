@@ -39,8 +39,27 @@ final class StatusItemController: NSObject, NSMenuDelegate {
         store.$style.sink { [weak self] _ in self?.refresh() }.store(in: &cancellables)
 
         refresh()
-        timer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { [weak self] _ in
+        scheduleMinuteAlignedTimer()
+    }
+
+    /// Fires exactly when the clock's minute value changes, then every 60
+    /// seconds after that — instead of an arbitrary 30s tick that could
+    /// redraw twice within the same displayed minute or lag behind it.
+    private func scheduleMinuteAlignedTimer() {
+        let now = Date()
+        let nextMinuteBoundary = Calendar.current.nextDate(
+            after: now,
+            matching: DateComponents(second: 0),
+            matchingPolicy: .nextTime
+        ) ?? now.addingTimeInterval(60)
+
+        let delay = nextMinuteBoundary.timeIntervalSince(now)
+
+        timer = Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { [weak self] _ in
             self?.refresh()
+            self?.timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+                self?.refresh()
+            }
         }
     }
 

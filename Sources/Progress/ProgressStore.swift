@@ -45,12 +45,17 @@ final class ProgressStore: ObservableObject {
     }
 
     private init() {
+        let calendar = Calendar.current
         let now = Date()
-        let defaultEnd = Calendar.current.date(byAdding: .hour, value: 8, to: now) ?? now.addingTimeInterval(8 * 3600)
+
+        // Default range: 12:00 AM today -> 11:59:59 PM today, so the icon
+        // naturally fills up as the whole day passes.
+        let startOfToday = calendar.startOfDay(for: now)
+        let endOfToday = calendar.date(byAdding: DateComponents(day: 1, second: -1), to: startOfToday) ?? now
 
         self.label = defaults.string(forKey: Keys.label) ?? "end of day"
-        self.startDate = defaults.object(forKey: Keys.start) as? Date ?? now
-        self.endDate = defaults.object(forKey: Keys.end) as? Date ?? defaultEnd
+        self.startDate = defaults.object(forKey: Keys.start) as? Date ?? startOfToday
+        self.endDate = defaults.object(forKey: Keys.end) as? Date ?? endOfToday
         self.displayMode = DisplayMode(rawValue: defaults.string(forKey: Keys.mode) ?? "") ?? .percentage
         self.style = ProgressStyle(rawValue: defaults.string(forKey: Keys.style) ?? "") ?? .pie
     }

@@ -1,0 +1,12 @@
+version: "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)"
+options: "f67026dd6957cb4ebee921f61b67f2b2bb1a7e92bc26af03b372ecf413198773"
+build_start_time: [1785214785, 551345000]
+build_end_time: [1785214787, 397173000]
+inputs:
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/Formatters.swift": [1785199340, 0]
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/IconRenderer.swift": [1785199336, 0]
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/ProgressStore.swift": [1785213301, 0]
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsView.swift": [1785199372, 0]
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/SettingsWindowController.swift": [1785199367, 0]
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/StatusItemController.swift": [1785213315, 0]
+  "/Users/geethan/Documents/GitHub/Progress/Sources/Progress/main.swift": [1785198716, 0]
