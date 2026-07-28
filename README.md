@@ -1,6 +1,6 @@
 # Progress 🥧
 
-[![Download for macOS](https://img.shields.io/badge/Download-Progress.app-blue?style=for-the-badge&logo=apple)](https://github.com/GeethanKE/Progress/releases/latest/download/Progress.app.zip)
+[![Download for macOS](https://img.shields.io/badge/Download-Progress.dmg-blue?style=for-the-badge&logo=apple)](https://github.com/GeethanKE/Progress/releases/latest/download/Progress.dmg)
 [![CI](https://github.com/GeethanKE/Progress/actions/workflows/ci.yml/badge.svg)](https://github.com/GeethanKE/Progress/actions/workflows/ci.yml)
 
 A tiny, native macOS menu bar utility that shows a pie or bar progress indicator
@@ -51,11 +51,13 @@ the same way native menu bar utilities organize secondary options.
 
 ## Installation
 
-### Option 1 — Download (recommended)
+### Option 1 — Download (recommended for most people)
 
-1. Click **[Download Progress.app](https://github.com/GeethanKE/Progress/releases/latest/download/Progress.app.zip)** (also available on the [Releases](https://github.com/GeethanKE/Progress/releases) page).
-2. Unzip it and drag `Progress.app` into `/Applications`.
-3. Since this build isn't notarized by Apple, the first launch needs one of:
+1. Click **[Download Progress.dmg](https://github.com/GeethanKE/Progress/releases/latest/download/Progress.dmg)** (also on the [Releases](https://github.com/GeethanKE/Progress/releases) page).
+2. Double-click `Progress.dmg` to mount it.
+3. Drag `Progress.app` onto the **Applications** shortcut in the window that opens.
+4. Eject the disk image, then open `Progress.app` from `/Applications` (Launchpad, Spotlight, or Finder).
+5. Since this build isn't notarized by Apple, the very first launch needs one of:
    - Right-click `Progress.app` → **Open** → **Open** again in the dialog, or
    - Run `xattr -cr /Applications/Progress.app` in Terminal once, then double-click normally.
 
@@ -66,27 +68,34 @@ To launch it automatically at login, add `Progress.app` in
 
 ```bash
 git clone https://github.com/GeethanKE/Progress.git
-cd progress
-./scripts/build-app.sh
+cd Progress
+./scripts/build-dmg.sh   # or ./scripts/build-app.sh for just the .app, no dmg
 ```
 
-This produces `Progress.app` locally — no download, no Gatekeeper prompt tied
-to a stranger's binary.
+This produces `Progress.dmg` (or `Progress.app`) locally — no download, no
+Gatekeeper prompt tied to a stranger's binary.
 
 ### Option 3 — Run directly with Swift Package Manager
 
 ```bash
 git clone https://github.com/GeethanKE/Progress.git
-cd progress
+cd Progress
 swift run -c release
 ```
+
+### The full source is always attached too
+
+Every GitHub Release automatically includes **Source code (zip)** and
+**Source code (tar.gz)** links below the `Progress.dmg` asset — so anyone who
+wants to read, audit, or build from source has that one click away as well,
+right alongside the installer.
 
 ### Releasing a new version (for maintainers)
 
 Every push of a `v*.*.*` tag triggers `.github/workflows/release.yml`, which
-builds `Progress.app` on a macOS runner, zips it, and attaches
-`Progress.app.zip` to a new GitHub Release — so the download badge above
-always points at the latest build automatically.
+builds `Progress.app`, wraps it into `Progress.dmg`, and attaches it to a new
+GitHub Release — so the download badge above always points at the latest
+build automatically.
 
 ```bash
 git tag v1.0.0
@@ -106,7 +115,7 @@ git push origin v1.0.0
 Progress/
 ├── .github/workflows/
 │   ├── ci.yml                    # Builds on every push/PR
-│   └── release.yml               # Builds + attaches Progress.app.zip to GitHub Releases on tag push
+│   └── release.yml               # Builds Progress.dmg and attaches it to GitHub Releases on tag push
 ├── Package.swift
 ├── Sources/Progress/
 │   ├── main.swift                  # App entry point (AppDelegate)
@@ -116,7 +125,9 @@ Progress/
 │   ├── IconRenderer.swift          # Draws the template pie/bar icon
 │   ├── Formatters.swift            # Percent / remaining-time string helpers
 │   └── SettingsView.swift          # SwiftUI content for the Settings… window
-├── scripts/build-app.sh         # Bundles the release build into Progress.app
+├── scripts/
+│   ├── build-app.sh              # Bundles the release build into Progress.app
+│   └── build-dmg.sh              # Wraps Progress.app into a drag-to-Applications Progress.dmg
 ├── LICENSE
 └── README.md
 ```
