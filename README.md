@@ -22,7 +22,7 @@ fills up, or a bar, whatever's cuter to you.
 
 That's it. That's the whole app. No accounts, no ads, no tracking, no popups
 begging you to subscribe to anything. It just sits there being aesthetic and
-useful 🎀
+useful 
 
 <br>
 
