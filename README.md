@@ -8,7 +8,7 @@
 
 [![Download for macOS](https://img.shields.io/badge/⬇️_Download_for_Mac-Progress.dmg-ffb6c1?style=for-the-badge)](https://github.com/GeethanKE/Progress/releases/latest/download/Progress.dmg)
 
-*no coding, no terminal, no scary stuff — just click and go *
+*no coding, no terminal, no scary stuff — just click and go 🩷*
 
 </div>
 
@@ -22,11 +22,11 @@ fills up, or a bar, whatever's cuter to you.
 
 That's it. That's the whole app. No accounts, no ads, no tracking, no popups
 begging you to subscribe to anything. It just sits there being aesthetic and
-useful 
+useful 🎀
 
 <br>
 
-## how to install it 💫
+## how to install it (like actually so easy) 💫
 
 1. Click the pink **Download** button up top ⬆️
 2. A file called `Progress.dmg` lands in your Downloads — double click it
@@ -43,7 +43,7 @@ happens:
 - right-click the Progress icon → click **Open** → click **Open** again when
   it asks — and that's it, forever, you'll never see that again
 
-That's genuinely it. You're done. Look up at your menu bar 
+That's genuinely it. You're done. Look up at your menu bar 🎀
 
 <br>
 
@@ -68,6 +68,21 @@ brew upgrade --cask progress
 ## making it yours 💌
 
 Click the icon up top any time to see:
+
+```
+   ◐  ← your lil progress icon
+   │
+   ▼
+┌───────────────────────────────┐
+│ 64 %                          │
+│ 8 hrs 44 min until end of day │
+├───────────────────────────────┤
+│ Settings…                     │  ← set your own start/end time
+│ More ▸                        │  → percent/time left, pie/bar, repeat daily
+├───────────────────────────────┤
+│ Quit Progress                 │
+└───────────────────────────────┘
+```
 
 Open **Settings…** to give it a cute label and pick when your "day" starts
 and ends — defaults to midnight → midnight so it just works right away, but
@@ -95,7 +110,7 @@ depending on your wallpaper and dark mode settings ✨
 
 <br>
 
-## it's private
+## it's private, i promise 🔒
 
 Everything — your start time, end time, all of it — lives only on your own
 Mac. Nothing gets sent anywhere, there's no internet connection happening at
@@ -124,8 +139,35 @@ swift run -c release     # just run it directly, no packaging
 
 Requires macOS 12+ and Swift 5.9+ / Xcode 15+.
 
+### project structure
 
-### how the progress calculation works simmple math
+```
+Progress/
+├── .github/workflows/
+│   ├── ci.yml                    # builds on every push/PR
+│   └── release.yml               # builds Progress.dmg + attaches to GitHub Releases on tag push
+├── Package.swift
+├── Resources/
+│   └── AppIcon.iconset/          # all required icon sizes; compiled to .icns at build time
+├── docs/
+│   ├── logo.png                  # README header image
+│   └── screenshots/              # drop screenshot1.png / screenshot2.png here — used in README
+├── Sources/Progress/
+│   ├── main.swift                     # app entry point (AppDelegate)
+│   ├── StatusItemController.swift     # NSStatusItem + native NSMenu + minute-aligned timer
+│   ├── SettingsWindowController.swift # native window hosting the SwiftUI settings view
+│   ├── ProgressStore.swift            # persisted model: start/end time, display prefs
+│   ├── IconRenderer.swift             # draws the template pie/bar icon
+│   ├── Formatters.swift               # percent / remaining-time string helpers
+│   └── SettingsView.swift             # SwiftUI content for the Settings… window
+├── scripts/
+│   ├── build-app.sh              # bundles the release build into Progress.app (incl. app icon)
+│   └── build-dmg.sh              # wraps Progress.app into a drag-to-Applications Progress.dmg
+├── LICENSE
+└── README.md
+```
+
+### how the progress calculation works
 
 ```
 fraction = (now - startDate) / (endDate - startDate)
@@ -186,9 +228,13 @@ release still works fine, Homebrew installs just won't be available yet.
 
 ### roadmap
 
+- [x] Recurring daily ranges — toggle **More → Repeat Daily** (on by default);
+      when the current range ends, it automatically shifts forward by whole
+      days (DST-safe) until it covers "now" again, instead of freezing at
+      "Done." Turn it off for one-time deadlines/countdowns that shouldn't
+      repeat.
 - [ ] Multiple saved presets (e.g. "Workday", "Sprint", "Vacation countdown")
 - [ ] Optional notification when the end time is reached
-- [ ] Recurring daily ranges (e.g. always 9–5 on weekdays)
 
 ### contributing
 
@@ -201,6 +247,6 @@ single-purpose utility, not grow into a full task manager.
 
 <div align="center">
 
-MIT licensed — see [LICENSE](LICENSE) 
+MIT licensed — see [LICENSE](LICENSE) 🩷
 
 </div>

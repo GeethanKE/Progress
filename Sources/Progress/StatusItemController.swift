@@ -25,6 +25,7 @@ final class StatusItemController: NSObject, NSMenuDelegate {
     private let remainingItem = NSMenuItem()
     private var modeItems: [DisplayMode: NSMenuItem] = [:]
     private var styleItems: [ProgressStyle: NSMenuItem] = [:]
+    private var repeatDailyItem: NSMenuItem?
 
     override init() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
@@ -37,7 +38,25 @@ final class StatusItemController: NSObject, NSMenuDelegate {
         store.$endDate.sink { [weak self] _ in self?.refresh() }.store(in: &cancellables)
         store.$displayMode.sink { [weak self] _ in self?.refresh() }.store(in: &cancellables)
         store.$style.sink { [weak self] _ in self?.refresh() }.store(in: &cancellables)
+        store.$repeatDaily.sink { [weak self] _ in self?.refresh() }.store(in: &cancellables)
 
+        // Timers don't fire while the Mac is asleep, so a range that ended
+        // hours ago (or days, if it slept overnight) needs to be caught up
+        // on immediately when it wakes, not on the next 60s tick.
+        NSWorkspace.shared.notificationCenter.addObserver(
+            self, selector: #selector(handleWake),
+            name: NSWorkspace.didWakeNotification, object: nil
+        )
+
+        refresh()
+        scheduleMinuteAlignedTimer()
+    }
+
+    deinit {
+        NSWorkspace.shared.notificationCenter.removeObserver(self)
+    }
+
+    @objc private func handleWake() {
         refresh()
         scheduleMinuteAlignedTimer()
     }
@@ -46,6 +65,8 @@ final class StatusItemController: NSObject, NSMenuDelegate {
     /// seconds after that — instead of an arbitrary 30s tick that could
     /// redraw twice within the same displayed minute or lag behind it.
     private func scheduleMinuteAlignedTimer() {
+        timer?.invalidate()
+
         let now = Date()
         let nextMinuteBoundary = Calendar.current.nextDate(
             after: now,
@@ -119,6 +140,13 @@ final class StatusItemController: NSObject, NSMenuDelegate {
             moreMenu.addItem(item)
         }
 
+        moreMenu.addItem(.separator())
+
+        let repeatItem = NSMenuItem(title: "Repeat Daily", action: #selector(toggleRepeatDaily), keyEquivalent: "")
+        repeatItem.target = self
+        repeatDailyItem = repeatItem
+        moreMenu.addItem(repeatItem)
+
         return moreMenu
     }
 
@@ -142,6 +170,10 @@ final class StatusItemController: NSObject, NSMenuDelegate {
         store.style = style
     }
 
+    @objc private func toggleRepeatDaily() {
+        store.repeatDaily.toggle()
+    }
+
     @objc private func quit() {
         NSApplication.shared.terminate(nil)
     }
@@ -155,6 +187,8 @@ final class StatusItemController: NSObject, NSMenuDelegate {
     // MARK: - Refresh
 
     private func refresh() {
+        store.rollForwardIfNeeded()
+
         let fraction = store.fraction
         statusItem.button?.image = IconRenderer.image(fraction: fraction, style: store.style)
 
@@ -181,6 +215,7 @@ final class StatusItemController: NSObject, NSMenuDelegate {
         for (style, item) in styleItems {
             item.state = style == store.style ? .on : .off
         }
+        repeatDailyItem?.state = store.repeatDaily ? .on : .off
     }
 
     private func styledTitle(_ text: String, size: CGFloat = 13) -> NSAttributedString {

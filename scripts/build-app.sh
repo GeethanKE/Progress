@@ -57,4 +57,12 @@ cat > "$APP_DIR/Contents/Info.plist" << EOF
 </plist>
 EOF
 
+echo "==> Ad-hoc signing $APP_DIR..."
+# Unsigned bundles get flagged by Gatekeeper as "damaged" on modern macOS,
+# not just "unidentified developer". An ad-hoc signature (no paid Apple
+# Developer account needed) is enough to fix that specific error, though the
+# one-time "unidentified developer" right-click-to-open step still applies
+# since this isn't notarized by Apple.
+codesign --force --deep --sign - "$APP_DIR"
+
 echo "==> Done. Move $APP_DIR to /Applications and double-click to launch."
