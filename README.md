@@ -6,9 +6,10 @@
 
 ### a lil menu bar buddy that watches your day go by
 
-[![Download for macOS](https://img.shields.io/badge/⬇️_Download_for_Mac-Progress.dmg-ffb6c1?style=for-the-badge)](https://github.com/GeethanKE/Progress/releases/latest/download/Progress.dmg)
+[![Homebrew](https://img.shields.io/badge/brew_install--cask-geethanke%2Fprogress%2Fprogress-ffb6c1?style=for-the-badge)](#how-to-install-it-)
+[![Download for macOS](https://img.shields.io/badge/⬇️_or_Download-Progress.dmg-ffb6c1?style=for-the-badge)](https://github.com/GeethanKE/Progress/releases/latest/download/Progress.dmg)
 
-*no coding, no terminal, no scary stuff — just click and go 🩷*
+*one line in Terminal, or one drag-and-drop — whichever's more you 🩷*
 
 </div>
 
@@ -26,42 +27,43 @@ useful 🎀
 
 <br>
 
-## how to install it (like actually so easy) 💫
+## how to install it 💫
 
-1. Click the pink **Download** button up top ⬆️
-2. A file called `Progress.dmg` lands in your Downloads — double click it
-3. A little window pops up, drag the **Progress** icon onto the **Applications**
-   folder icon (there's literally an arrow showing you where lol)
-4. Close that window, then open **Launchpad** or **Spotlight** (`⌘ + Space`)
-   and type "Progress" — click it to open
-
-**one weird extra step the first time only:** your Mac might say it can't
-verify the developer (that's just because I'm one (1) person and not a whole
-company paying Apple $$$ every year, not because anything's wrong 🫶). If that
-happens:
-
-- right-click the Progress icon → click **Open** → click **Open** again when
-  it asks — and that's it, forever, you'll never see that again
-
-That's genuinely it. You're done. Look up at your menu bar 🎀
-
-<br>
-
-## or if you're a terminal person 🖤
-
-If you already have [Homebrew](https://brew.sh) installed, skip all of that
-and just run:
+**if you have [Homebrew](https://brew.sh)** — this is the easiest way, one line, no dragging anything anywhere:
 
 ```bash
 brew install --cask geethanke/progress/progress
 ```
 
-Same app, same everything, it just skips the Gatekeeper right-click step
-since Homebrew handles that for you. To update later:
+open it from Launchpad or Spotlight (`⌘ + Space`, type "Progress") once it's done. To update later:
 
 ```bash
 brew upgrade --cask progress
 ```
+
+**if you don't have Homebrew** — download it instead:
+
+[![Download for macOS](https://img.shields.io/badge/⬇️_Download_for_Mac-Progress.dmg-ffb6c1?style=for-the-badge)](https://github.com/GeethanKE/Progress/releases/latest/download/Progress.dmg)
+
+1. Click that button, `Progress.dmg` lands in your Downloads — double click it
+2. A little window pops up, drag the **Progress** icon onto the **Applications**
+   folder icon (there's literally an arrow showing you where lol)
+3. Close that window, then open **Launchpad** or **Spotlight** (`⌘ + Space`)
+   and type "Progress" — click it to open
+
+**either way, one weird extra step the first time only:** your Mac might say
+something like *"Apple could not verify Progress is free of malware"* —
+that happens whether you use Homebrew or the download, since it just means
+I'm one (1) person and not a company paying Apple $$$/year for notarization,
+not that anything's actually wrong 🫶. If that happens:
+
+- **On newer macOS:** go to **System Settings → Privacy & Security**, scroll
+  down, and click **Open Anyway** next to Progress — then confirm once more
+- **On older macOS:** right-click the Progress icon → click **Open** → click
+  **Open Anyway** in the dialog that pops up
+
+That's a one-time thing per install — you'll never see it again after that.
+That's genuinely it. You're done. Look up at your menu bar 🎀
 
 <br>
 
